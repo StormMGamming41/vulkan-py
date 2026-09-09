@@ -1,7 +1,7 @@
 [project]
 name = "vulkan_py"
-version = "0.1.1"
-description = "Generate Python ctypes bindings for the Vulkan API from vk.xml."
+version = "1.0.0"
+description = "Actual ultimate Python binding for Vulkan after the realitix project went cold. This package supports lastest release of the Vulkan SDK and API, and require zero dependencies"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "GPL-3.0-or-later" }
@@ -15,16 +15,19 @@ keywords = [
     "python",
     "ctypes",
     "bindings",
-    "code-generation"
+    "code-generation",
+    "api",
+    "vulkan api"
 ]
 
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 3 - Release",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Topic :: Software Development :: Libraries",
     "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: API :: Vulkan",
 ]
 
 [project.optional-dependencies]
