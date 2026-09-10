@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/vulkan_py/__init__.py
+src/vulkan_py/basetypes.py
+src/vulkan_py/bitmasks.py
+src/vulkan_py/commands.py
+src/vulkan_py/enums.py
+src/vulkan_py/handles.py
+src/vulkan_py/loader.py
+src/vulkan_py/types.py
+src/vulkan_py/wrapper.py
+src/vulkan_py.egg-info/PKG-INFO
+src/vulkan_py.egg-info/SOURCES.txt
+src/vulkan_py.egg-info/dependency_links.txt
+src/vulkan_py.egg-info/requires.txt
+src/vulkan_py.egg-info/top_level.txt

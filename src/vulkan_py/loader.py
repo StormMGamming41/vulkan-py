@@ -14,7 +14,7 @@
 import platform
 from ctypes import *
 from .handles import VkInstance
-from .commands import PFN_vkGetInstanceProcAddr, PFN_vkCreateInstance, PFN_vkGetDeviceProcAddr
+from .commands import PFN_vkGetInstanceProcAddr, PFN_vkCreateInstance, PFN_vkGetDeviceProcAddr, PFN_vkEnumerateInstanceExtensionProperties, PFN_vkEnumerateInstanceLayerProperties
 
 def _load_vulkan_library():
     system = platform.system()
@@ -45,3 +45,11 @@ vkCreateInstance.argtypes = PFN_vkCreateInstance._argtypes_
 vkGetDeviceProcAddr = _lib.vkGetDeviceProcAddr
 vkGetDeviceProcAddr.restype = PFN_vkGetDeviceProcAddr._restype_
 vkGetDeviceProcAddr.argtypes = PFN_vkGetDeviceProcAddr._argtypes_
+
+vkEnumerateInstanceExtensionProperties = _lib.vkEnumerateInstanceExtensionProperties
+vkEnumerateInstanceExtensionProperties.restype = PFN_vkEnumerateInstanceExtensionProperties._restype_
+vkEnumerateInstanceExtensionProperties.argtypes = PFN_vkEnumerateInstanceExtensionProperties._argtypes_
+
+vkEnumerateInstanceLayerProperties = _lib.vkEnumerateInstanceLayerProperties
+vkEnumerateInstanceLayerProperties.restype = PFN_vkEnumerateInstanceLayerProperties._restype_
+vkEnumerateInstanceLayerProperties.argtypes = PFN_vkEnumerateInstanceLayerProperties._argtypes_

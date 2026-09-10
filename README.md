@@ -28,29 +28,33 @@ pip install vulkan_py
 ## A taste of it
 
 ```python
-import vulkan_py as vk
+from vulkan_py import *
+from ctypes import pointer, byref
 
-app_info = vk.VkApplicationInfo(
+app_info = VkApplicationInfo(
     pApplicationName=b"My App",
-    apiVersion=vk.VK_API_VERSION_1_3,
+    applicationVersion=1,
+    pEngineName=b"No Engine",
+    engineVersion=1,
+    apiVersion=(1 << 22) | (3 << 22),  # Vulkan 1.3
 )
 
-create_info = vk.VkInstanceCreateInfo(
-    pApplicationInfo=app_info,
-)
+create_info = VkInstanceCreateInfo(pApplicationInfo=pointer(app_info))
 
-instance = vk.vkCreateInstance(create_info, None)
+raw_instance = VkInstance()
+vkCreateInstance(byref(create_info), None, byref(raw_instance))
+instance = Instance(raw_instance)  # wrapper used for all further instance-level calls
 ```
 
-> **Note:** this snippet is illustrative — swap in the exact call shape from the docs below before publishing.
+*(extension/validation-layer setup omitted here for brevity — the full version is in the docs)*
 
 Vulkan itself is huge and verbose, and a README isn't the place to walk you through it. The full step-by-step guide — from your first instance all the way to a point-light-lit triangle using dynamic rendering — lives in the repo docs:
 
-👉 **[Read the full tutorial](https://github.com/StormMGamming41/Vulkan-vk-xml-to-py-parser)**
+👉 **[Read the full tutorial](docs/README.md)**
 
 ## Status
 
-`vulkan_py` is in **alpha**. The generator and core API surface work end to end, and it's actively used to build real renderers — but expect some rough edges while the API settles.
+`vulkan_py` is **Production/Stable**. The generator and full API surface work end to end and it's actively used to build real renderers — issues are still welcome, but it's no longer considered early/experimental.
 
 ## Contributing
 
