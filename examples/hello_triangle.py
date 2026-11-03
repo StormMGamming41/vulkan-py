@@ -5,6 +5,7 @@ import ctypes
 from ctypes import c_uint32, c_uint64, c_void_p, c_float, byref, pointer, cast, POINTER, c_char_p
 
 MAX_FRAMES_IN_FLIGHT = 2
+UINT64_MAX = 0xFFFFFFFFFFFFFFFF
 
 def check(result, what):
     if result != output.enums.VkResult.VK_SUCCESS:
@@ -454,12 +455,12 @@ class App:
 
     def draw_frame(self):
         fence = self.in_flight_fences[self.current_frame]
-        self.device.vkWaitForFences(1, byref(fence), 1, 0xFFFFFFFFFFFFFFFF)
+        self.device.vkWaitForFences(1, byref(fence), 1, UINT64_MAX)
         self.device.vkResetFences(1, byref(fence))
 
         image_index = c_uint32(0)
         self.device.vkAcquireNextImageKHR(
-            self.swapchain, 0xFFFFFFFFFFFFFFFF,
+            self.swapchain, UINT64_MAX,
             self.image_available_semaphores[self.current_frame], output.VkFence(0), byref(image_index)
         )
 
