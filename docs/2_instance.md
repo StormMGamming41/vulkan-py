@@ -166,8 +166,12 @@ Now is the right time to learn about Vulkan commands: what they are, how they ar
 
 ---
 
-| [← Previous](1_window.md) | [Next →](2.1_commands.md) |
-|:---|---:|
+<div style="display: flex; justify-content: space-between;">
+
+<a href="1_window.md">← Previous</a>
+<a href="2.1_commands.md">Next →</a>
+
+</div>
 
 ---
 
