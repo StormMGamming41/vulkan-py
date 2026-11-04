@@ -173,6 +173,12 @@ Now is the right time to learn about Vulkan commands: what they are, how they ar
 
 </div>
 
+<div style="display: flex; justify-content: space-between;">
+  <strong>← Previous Chapter</strong>
+  <strong>Next Chapter →</strong>
+</div>
+
+
 ---
 
 ## Files
