@@ -50,7 +50,7 @@ instance = Instance(raw_instance)  # wrapper used for all further instance-level
 
 Vulkan itself is huge and verbose, and a README isn't the place to walk you through it. The full step-by-step guide — from your first instance all the way to a point-light-lit triangle using dynamic rendering — lives in the repo docs:
 
-👉 **[Read the full tutorial](docs/README.md)**
+👉 **[Read the full tutorial](docs/get_started.md)**
 
 ## Status
 
