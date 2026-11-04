@@ -145,12 +145,10 @@ Add the following function to our class:
 ```python
 def run(self):
 
-    try:
-        self.initialize()
-        self.main_loop()
+    self.initialize()
+    self.main_loop()
 
-    finally:
-        self.cleanup()
+    self.cleanup()
 ```
 
 This ensures that our cleanup function is called even if an error occurs during initialization or while running the application.
