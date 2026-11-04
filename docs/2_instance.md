@@ -173,9 +173,9 @@ Now is the right time to learn about Vulkan commands: what they are, how they ar
 
 </div>
 
-<div style="display: flex; justify-content: space-between;">
-  <strong>← Previous Chapter</strong>
-  <strong>Next Chapter →</strong>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div>Left Content Here</div>
+  <div>Right Content Here</div>
 </div>
 
 
