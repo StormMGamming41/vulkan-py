@@ -121,4 +121,8 @@ Your Python environment can import Vulkan-Py, and your system has a working Vulk
 
 We can finally move on to the interesting part: writing some actual Vulkan code!
 
-[Next ->](1_window.md)
+---
+
+[Next →](1_window.md)
+
+---

@@ -172,10 +172,16 @@ Run your Python file, and you should see a blank window titled **Hello Vulkan**.
 
 In the next chapter, we'll finally be creating our first **Vulkan object**: a `VkInstance` object, which serves as the connection between our application and the Vulkan API.
 
-[Next ->](2_instance.md)  
-[<- Previous](get_started.md)
+---
+
+[← Previous](get_started.md)
+
+[Next →](2_instance.md)
+
+---
 
 ## Files
 
 - [`main.py`](code/main.py)
 
+---

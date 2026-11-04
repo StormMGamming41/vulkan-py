@@ -166,15 +166,9 @@ Now is the right time to learn about Vulkan commands: what they are, how they ar
 
 ---
 
-<div style="display: flex; justify-content: space-between;">
+[← Previous](1_window.md)
 
-<a href="1_window.md">← Previous</a>
-<a href="2.1_commands.md">Next →</a>
-
-</div>
-
-<span style="float: right;">Right side</span> Left side text goes here.
-
+[Next →](2.1_commands.md)
 
 ---
 
