@@ -166,18 +166,8 @@ Now is the right time to learn about Vulkan commands: what they are, how they ar
 
 ---
 
-<table width="100%">
-<tr>
-<td align="left">
-
- [<- Previous](1_window.md) 
- </td>
-<td align="right"> 
-
-[Next ->](2.1_commands.md) 
-</td>
-</tr>
-</table>
+| [← Previous](1_window.md) | [Next →](2.1_commands.md) |
+|:---|---:|
 
 ---
 
