@@ -292,7 +292,7 @@ I'm not explaining the color-coding part, as you can find documentation on `colo
 Now, if you want to, you can test color coding by triggering debug messages yourself, for this add the following code at the end of your `create_debug_messenger` function (and remove / comment it out after testing is done):
 
 ```python
-kData = VkDebugUtilsMessengerCallbackDataEXT()
+callbackData = VkDebugUtilsMessengerCallbackDataEXT()
 callbackData.pMessageIdName = b"VOLUNTARY_TRIGGER_TEST"
 callbackData.messageIdNumber = 9999
 callbackData.pMessage = b"This is a voluntary info message triggered manually by the application."
