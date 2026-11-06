@@ -289,6 +289,41 @@ def _debug_callback(self, severity, msg_type, callback_data_ptr, user_data):
 
 I'm not explaining the color-coding part, as you can find documentation on `colorama` on the web, at least enough to get you started.
 
+Now, if you want to, you can test color coding by triggering debug messages yourself, for this add the following code at the end of your `create_debug_messenger` function (and remove / comment it out after testing is done):
+
+```python
+kData = VkDebugUtilsMessengerCallbackDataEXT()
+callbackData.pMessageIdName = b"VOLUNTARY_TRIGGER_TEST"
+callbackData.messageIdNumber = 9999
+callbackData.pMessage = b"This is a voluntary info message triggered manually by the application."
+
+self.instance.vkSubmitDebugUtilsMessageEXT(
+    VkDebugUtilsMessageSeverityFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_INFO_BIT_EXT,
+    VkDebugUtilsMessageTypeFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT,
+    byref(callbackData)
+)
+callbackData = VkDebugUtilsMessengerCallbackDataEXT()
+callbackData.pMessageIdName = b"VOLUNTARY_TRIGGER_TEST"
+callbackData.messageIdNumber = 9999
+callbackData.pMessage = b"This is a voluntary waring message triggered manually by the application."
+
+self.instance.vkSubmitDebugUtilsMessageEXT(
+    VkDebugUtilsMessageSeverityFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT,
+    VkDebugUtilsMessageTypeFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT,
+    byref(callbackData)
+)
+callbackData = VkDebugUtilsMessengerCallbackDataEXT()
+callbackData.pMessageIdName = b"VOLUNTARY_TRIGGER_TEST"
+callbackData.messageIdNumber = 9999
+callbackData.pMessage = b"This is a voluntary error message triggered manually by the application."
+
+self.instance.vkSubmitDebugUtilsMessageEXT(
+    VkDebugUtilsMessageSeverityFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT,
+    VkDebugUtilsMessageTypeFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT,
+    byref(callbackData)
+)
+```
+
 Then, don't forget to add all of this to the `initialize` function:
 
 ```python

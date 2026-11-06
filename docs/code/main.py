@@ -142,6 +142,26 @@ class HelloTriangle:
         #     VkDebugUtilsMessageTypeFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT,
         #     byref(callbackData)
         # )
+        # callbackData = VkDebugUtilsMessengerCallbackDataEXT()
+        # callbackData.pMessageIdName = b"VOLUNTARY_TRIGGER_TEST"
+        # callbackData.messageIdNumber = 9999
+        # callbackData.pMessage = b"This is a voluntary waring message triggered manually by the application."
+        
+        # self.instance.vkSubmitDebugUtilsMessageEXT(
+        #     VkDebugUtilsMessageSeverityFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT,
+        #     VkDebugUtilsMessageTypeFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT,
+        #     byref(callbackData)
+        # )
+        # callbackData = VkDebugUtilsMessengerCallbackDataEXT()
+        # callbackData.pMessageIdName = b"VOLUNTARY_TRIGGER_TEST"
+        # callbackData.messageIdNumber = 9999
+        # callbackData.pMessage = b"This is a voluntary error message triggered manually by the application."
+        
+        # self.instance.vkSubmitDebugUtilsMessageEXT(
+        #     VkDebugUtilsMessageSeverityFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT,
+        #     VkDebugUtilsMessageTypeFlagBitsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT,
+        #     byref(callbackData)
+        # )
 
     def initialize(self):
 
