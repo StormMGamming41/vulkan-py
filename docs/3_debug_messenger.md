@@ -180,6 +180,9 @@ Now, let's get to the meaning of all this code we just wrote:
 
 And that's all of it. Now we're pretty close to completing this.
 
+>[!TIP]
+>If you are also going with all the options that I selected, adding color coding to your callabck function can be a pretty usefull things, I've cover it in the next section.
+
 ## Debug Callback
 
 In this section, we will be writing the function that our messenger will use to deliver debug messages to us. And remember, you can customize it almost **however you want it to be**. It just needs to accept all the arguments it gets from the debug messenger.
