@@ -305,8 +305,15 @@ Now, just head to the next section, and we're pretty much done.
 
 I hope you do remember that every Vulkan object we create needs to be destroyed after its purpose is fulfilled.
 
-Or you might end up in a funny situation where your messenger reports an error about itself.
+Or you might end up in a funny situation where your messenger reports an error about itself:
 
+```text
+[VALD:ERROR] vkDestroyInstance(): VkInstance 0x1c341064100 has 1 leaked objects that have not been destroyed.
+VkDebugUtilsMessengerEXT 0x10000000001
+The Vulkan spec states: All child objects that were created with instance or with a VkPhysicalDevice retrieved from it, and that can be destroyed or freed, must have been destroyed or freed prior to destroying instance (https://docs.vulkan.org/spec/latest/chapters/initialization.html#VUID-vkDestroyInstance-instance-00629) 
+```
+
+>This might not be understandable right now but, no worries it's just an example.  
 >*Why did I call that funny?* (Please don't mind these kinds of things, I just got sidetracked.)
 
 So, finally, in the `cleanup` function:
